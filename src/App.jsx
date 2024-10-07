@@ -46,7 +46,7 @@ const OTCChart = () => {
   });
 
   const fetchData = () => {
-    fetch(`http://localhost:8000/get-candles/?initial_price=100&volatility_percent=5&trend_strength=0.0005&num_points=${quantity}&candle_size=10`)
+    fetch(`https://graph-test-22c1ac60ca6d.herokuapp.com/get-candles/?initial_price=100&volatility_percent=5&trend_strength=0.0005&num_points=${quantity}&candle_size=10`)
       .then(response => response.json())
       .then(data => {
         setSeries([{
